@@ -1,0 +1,5 @@
+[requires]
+crowcpp-crow/0.3
+
+[generators]
+cmake
