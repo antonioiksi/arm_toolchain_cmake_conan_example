@@ -1,6 +1,6 @@
 # c++ crosscompiling project example
 
-** Requirements **
+**Requirements**
 * Linux 4+ (tested on Ubuntu 18.04)
 * cmake (apt install cmake)
 * conan (pip3 install conan)
