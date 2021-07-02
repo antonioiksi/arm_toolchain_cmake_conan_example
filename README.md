@@ -22,7 +22,7 @@ make release
 ```
 
 
-## ERRORS
+## IF YOU GET ERROR!!!
 ```
 ./my_project: /usr/lib/aarch64-linux-gnu/libstdc++.so.6: version `CXXABI_1.3.11' not found (required by ./my_project)
 ./my_project: /usr/lib/aarch64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.26' not found (required by ./my_project)
