@@ -16,7 +16,7 @@ make export-path
 `PATH=$PATH:/opt/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu/bin`
 
 ## Build
-*for dependencies using conan package manager*
+> for dependencies using conan package manager
 ```sh
 make release
 ```
@@ -24,8 +24,8 @@ make release
 ## Enjoy
 find out *snack* in the `build/bin` folder
 
-
-## IF YOU GET ERROR!!!
+------
+### IF YOU GET ERROR!!!
 ```
 ./my_project: /usr/lib/aarch64-linux-gnu/libstdc++.so.6: version `CXXABI_1.3.11' not found (required by ./my_project)
 ./my_project: /usr/lib/aarch64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.26' not found (required by ./my_project)
