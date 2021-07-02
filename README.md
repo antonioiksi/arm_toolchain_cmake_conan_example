@@ -22,7 +22,7 @@ make release
 ```
 
 ## Enjoy
-find out purpose in the `build/bin` folder
+find out *snack* in the `build/bin` folder
 
 
 ## IF YOU GET ERROR!!!
