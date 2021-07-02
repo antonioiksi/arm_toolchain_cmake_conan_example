@@ -2,32 +2,23 @@
 
 ** Requirements **
 * Linux 4+ (tested on Ubuntu 18.04)
-* cmake
-* conan
+* cmake (apt install cmake)
+* conan (pip3 install conan)
 
 ## Install toolchain
 
 ```sh
-wget --no-http-keep-alive --show-progress -O toolchain.tar.xz "https://developer.arm.com/-/media/Files/downloads/gnu-a/10.2-2020.11/binrel/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu.tar.xz?revision=972019b5-912f-4ae6-864a-f61f570e2e7e&la=en&hash=B8618949E6095C87E4C9FFA1648CAA67D4997D88"
-tar -xfv toolchain.tar.xz
-mv gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu /opt
+make install-toolchain
+make export-path
 ```
 
-Edit ~/.bashrc, add at the end of file
-```
-PATH=$PATH:/opt/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu/bin
-```
+> DO NOT FORGET ADD GCC LOCATION TO $PATH
+`PATH=$PATH:/opt/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu/bin`
 
-## Compile
+## Build
+*for dependencies using conan package manager*
 ```sh
-rm -rf build && mkdir build && cd build
-rm -rf ~/.conan/data
-
-conan install .. --build=missing --profile ../conan-aarch64.profile
-
-cmake -DCMAKE_TOOLCHAIN_FILE=../aarch64-linux-gnu.cmake ..
-
-cmake --build . --config Release
+make release
 ```
 
 
@@ -38,6 +29,11 @@ cmake --build . --config Release
 ```
 Resolves with two lines CMAKE (add std into executer)
 ```
+# file: CMakeLists.txt
 target_link_libraries(my_project -static-libgcc -static-libstdc++)
 ```
-
+and
+```
+# file: gcc10-aarch64-none-linux-gnu.cmake
+set(CMAKE_EXE_LINKER_FLAGS "-static")
+```
