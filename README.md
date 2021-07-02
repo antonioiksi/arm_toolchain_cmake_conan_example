@@ -21,6 +21,9 @@ make export-path
 make release
 ```
 
+## Enjoy
+find out purpose in the `build/bin` folder
+
 
 ## IF YOU GET ERROR!!!
 ```
