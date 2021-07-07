@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  arm-compiler:
+    build: .
+    image: ubuntu18/arm64_compiler
+    container_name: ubuntu_arm64_compiler
+    tty: true
+    volumes:
+      - .:/root
