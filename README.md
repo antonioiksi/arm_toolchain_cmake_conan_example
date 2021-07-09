@@ -1,15 +1,13 @@
 # c++ crosscompiling project example
 
 **Requirements**
-* Linux 4+ (tested on Ubuntu 18.04)
+* Linux 5.10 (tested on Ubuntu 18.04)
 * cmake (apt install cmake)
 * conan (pip3 install conan)
 
 ## Install toolchain
-
 ```sh
-make install-toolchain
-make export-path
+make config
 ```
 
 > DO NOT FORGET ADD GCC LOCATION TO $PATH
@@ -18,7 +16,7 @@ make export-path
 ## Build
 > for dependencies using conan package manager
 ```sh
-make release
+make build
 ```
 
 ## Enjoy
