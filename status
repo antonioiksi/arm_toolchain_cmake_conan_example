@@ -1,0 +1,36 @@
+Answerpro VideoGuard 1.1 Server
+Showing status information
+
+**** sshd server status:
+        PID: 1590
+        Listening at 0.0.0.0:22
+        Connected clients:
+                192.168.7.29:63897
+                192.168.7.29:64124
+        2 total
+
+**** stunnel_thread server status:
+        PID: 1531
+        Listening at 0.0.0.0:1520
+        Connected clients:
+                192.168.4.2:47996
+        1 total
+
+**** openvpn server status:
+        PID: 1545
+        Listening at 127.0.0.1:1194
+        Connected clients:
+                127.0.0.1:52742
+        1 total
+
+**** ntpd server status:
+        PID: 767
+        Active UDP socket on 10.20.0.1:123
+        Active UDP socket on 192.168.4.1:123
+        Active UDP socket on 192.168.7.1:123
+        Active UDP socket on 127.0.0.1:123
+        Active UDP socket on 0.0.0.0:123
+        Active UDP socket on fe80::fc00:2aff:fe6:123
+        Active UDP socket on fe80::accb:2bff:fe5:123
+        Active UDP socket on ::1:123
+        Active UDP socket on :::123

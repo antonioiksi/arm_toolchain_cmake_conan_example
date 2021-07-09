@@ -9,8 +9,13 @@ else ()
     message(WARNING "The file conanbuildinfo.cmake doesn't exist, you have to run conan install first")
 endif ()
 
-add_executable(my_project src/main.cpp)
+add_executable(crow src/main.cpp)
 
-target_link_libraries(my_project ${CONAN_LIBS})
+add_executable(vg_status src/vg_status/main.cpp)
 
-target_link_libraries(my_project -static-libgcc -static-libstdc++)
+
+target_link_libraries(crow ${CONAN_LIBS})
+
+target_link_libraries(crow -static-libgcc -static-libstdc++)
+
+target_link_libraries(vg_status -static-libgcc -static-libstdc++)
