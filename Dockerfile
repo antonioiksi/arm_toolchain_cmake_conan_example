@@ -5,4 +5,5 @@ RUN apt update && \
     python3-pip && \
     pip3 install conan
 
+WORKDIR /root
 
