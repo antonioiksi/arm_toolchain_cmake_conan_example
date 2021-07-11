@@ -1,4 +1,9 @@
 build
+build_*
 toolchains
 .cache
 .conan
+
+.viminfo
+.wget-hsts
+.bash_history

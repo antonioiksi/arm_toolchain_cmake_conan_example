@@ -5,22 +5,48 @@
 * cmake (apt install cmake)
 * conan (pip3 install conan)
 
-## Install toolchain
+---
+## Build for ARMv8 (aarch64)
+### Install toolchain
 ```sh
-make config
+make -f armv8.Makefile config
 ```
 
 > DO NOT FORGET ADD GCC LOCATION TO $PATH
 `PATH=$PATH:/opt/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu/bin`
 
-## Build
+### Build
 > for dependencies using conan package manager
 ```sh
-make build
+make -f armv8.Makefile build
 ```
 
-## Enjoy
+### Enjoy
 find out *snack* in the `build/bin` folder
+
+
+---
+
+## Build for AMD64
+### Install toolchain
+```sh
+apt install software-properties-common
+add-apt-repository ppa:ubuntu-toolchain-r/test
+apt update
+apt install gcc-10 g++-10 
+```
+
+> check `gcc-10` and `g++-10` location found in `$PATH`, default installed in 
+
+### Build
+> for dependencies using conan package manager
+```sh
+make -f amd64.Makefile build
+```
+
+### Enjoy
+find out *snack* in the `build/bin` folder
+
 
 ------
 ### IF YOU GET ERROR!!!
